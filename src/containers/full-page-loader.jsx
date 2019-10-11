@@ -28,7 +28,7 @@ class FullPageLoader extends Component {
               textAlign: "center"
             }}
           >
-            <Loader type="Triangle" color="#2E817F" height="100" width="100" />
+            <Loader type="Oval" />
             {loaderData && loaderData.loaderText ? (
               <p
                 style={{
