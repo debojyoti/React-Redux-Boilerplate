@@ -11,6 +11,9 @@ export const userDataReducer = (state = {}, action) => {
             newState = {};
             break;
         }
+        default: {
+            
+        }
     }
     return newState;
 }

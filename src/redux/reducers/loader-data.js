@@ -17,6 +17,9 @@ export const loaderDataReducer = (state = { isVisible: false, loaderText: 'Proce
             }
             break;
         }
+        default: {
+            
+        }
     }
     return newState;
 }

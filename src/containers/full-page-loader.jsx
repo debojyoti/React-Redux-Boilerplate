@@ -15,7 +15,7 @@ class FullPageLoader extends Component {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            position: "fixed",
+            position: "sticky",
             zIndex: 9999999,
             opacity: 0.95,
             backgroundColor: "white"
@@ -28,14 +28,14 @@ class FullPageLoader extends Component {
               textAlign: "center"
             }}
           >
-            <Loader type="Oval" />
+            <Loader type="Oval" color="#3498DB" />
             {loaderData && loaderData.loaderText ? (
               <p
                 style={{
                   fontFamily: "sans-serif",
                   fontSize: 17,
                   marginTop: 10,
-                  color: "#2E817F",
+                  color: "#3498DB",
                   fontWeight: 600
                 }}
               >
