@@ -7,6 +7,7 @@ import HomePage from './pages/home-page';
 import ProtectedRoute from './components/protected-routes';
 import LoginPage from './pages/login-page';
 import FullPageLoader from "./containers/full-page-loader";
+import { ToastsContainer, ToastsStore, ToastsContainerPosition } from "react-toasts";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Router>
           <div>
             <FullPageLoader></FullPageLoader>
-            {/* <ToastsContainer store={ToastsStore} position={ToastsContainerPosition.BOTTOM_RIGHT} /> */}
+            <ToastsContainer store={ToastsStore} position={ToastsContainerPosition.BOTTOM_RIGHT} />
             <Switch>
               <Route exact path="/login" component={LoginPage} />
               <ProtectedRoute exact path="*" component={HomePage} redirectRoute="/login" /> */}

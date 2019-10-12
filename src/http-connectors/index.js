@@ -114,7 +114,6 @@ export const makePostRequest = async (
             if (jsonResponse.error === false) {
               resolve(jsonResponse);
             } else {
-              console.log(jsonResponse);
               reject(jsonResponse);
             }
           },

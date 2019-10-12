@@ -107,13 +107,14 @@ class LoginPage extends Component {
     const { formFields, isFormValid, redirectTo } = this.state;
     this._makeAllFieldDirty();
     this._validateForm();
+    console.log('log')
     if (isFormValid) {
       try {
+        console.log('2')
         this.props.showLoader("Logging you in");
         const loginResponse = await login({
-          handle: formFields.handle.value,
-          password: formFields.password.value,
-          expiry: 3680
+          email: formFields.email.value,
+          password: formFields.password.value
         });
         // Login success
         this.props.updateUserData(loginResponse);
@@ -127,7 +128,7 @@ class LoginPage extends Component {
         }
       } catch (loginError) {
         this.props.hideLoader();
-        showToast(loginError.reason, "error");
+        showToast(loginError.reason? loginError.reason: 'Login server error', "error");
       }
     }
   };
