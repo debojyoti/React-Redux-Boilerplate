@@ -1,5 +1,5 @@
-import { makeGetRequest, makePostRequest, uploadFile, makePutRequest, makeDeleteRequest } from "../http-connectors";
-import { BASE_URL, googlePlacesConfig, cloudinaryConfig } from '../config/index';
+import { makePostRequest } from "../http-connectors";
+import { BASE_URL } from '../config/index';
 
 export const login = loginData => {
   return new Promise((resolve, reject) => {

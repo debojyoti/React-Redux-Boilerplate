@@ -1,5 +1,5 @@
 import { getToken } from "../token-interceptor";
-import { checkIfSessionExpired } from "../helper-methods";
+// import { checkIfSessionExpired } from "../helper-methods";
 import { handleErrorIfAvailable } from "../error-handler";
 
 /**
